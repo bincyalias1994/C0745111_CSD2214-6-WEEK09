@@ -1,12 +1,32 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8" />
     <title>C0745111</title>
     <link href="css/default.css" rel="stylesheet" />
 </head>
 <body>
-    <div>Content goes here!</div>
-    <script src="js/main.js"></script>
+    <div>Calculator</div>
+    
+    <script>
+        var calculator = {
+             snum : 1109,
+             sum : 0,
+             upto: 119,
+             //reduce: 11,
+             adder: function () {
+
+                for (var i = this.snum; i > this.upto; ) {
+                    this.sum += i;
+                    i -= 11;
+                }
+                return this.sum;
+
+            }
+
+        };
+        document.write(calculator.adder());
+    </script>
 </body>
 </html>
